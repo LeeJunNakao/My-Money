@@ -15,8 +15,8 @@ const debtSchema = new mongoose.Schema({
 
 const billingCycleSchema = new mongoose.Schema({
     name: { type: String, required: true},
-    month: { type: String, required: true, min:1, max: 12},
-    year: { type: String, required: true, min: 1970, max: 2100},
+    month: { type: Number, required: true, min:1, max: 12},
+    year: { type: Number, required: true, min: 1970, max: 2100},
     credits: [creditSchema],
     debts: [debtSchema]
 });
